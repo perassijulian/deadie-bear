@@ -1,0 +1,62 @@
+@import '../../../Variables.scss';
+
+//*{border: 1px solid red}
+
+.bearItem{
+    display: flex;
+    justify-content: center;
+
+    &--wrap{
+
+        &--header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        &--body{
+            display: flex;
+
+            &--description{
+                width: 400px;
+
+                &--item{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: $secColor;
+                    margin: 3px;
+                    padding: 3px;
+                    border-radius: 15px;
+
+                    h3{
+                        margin-left: 10px;
+                    }
+                    h4{
+                        margin-right: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+// <div className='bearItem'>
+// <div className='bearItem--wrap'>
+//     <div className='bearItem--wrap--header'>
+//         <img className='bearItem--wrap--header--arrow' src='' alt='arrow left'></img>
+//         <h1 className='bearItem--wrap--header--title'>Bear #1</h1>
+//         <img className='bearItem--wrap--header--arrow' src='' alt='arrow right'></img>
+//     </div>
+//     <div className='bearItem--wrap--body'>
+//         <img src='' alt='Nft selected'></img>
+//         <div  className='bearItem--wrap--body--description'>
+//             <h2>Attributes</h2>
+//             {Object.keys(data).map((keyName, i) => (
+//                 <div className="travelcompany-input" key={i}>
+//                     <h3 className="input-label">{keyName}</h3>
+//                     <h4 className=''>{data[keyName]}</h4>
+//                 </div>
+//             ))}

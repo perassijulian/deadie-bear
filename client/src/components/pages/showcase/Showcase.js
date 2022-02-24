@@ -1,9 +1,10 @@
 import React from 'react'
+import BearItem from '../../common/bearItem/BearItem'
 
 const Showcase = () => {
   return (
     <div>
-    <h1> SHowcase</h1>
+      <BearItem />
     </div>
   )
 }
