@@ -1,9 +1,11 @@
 import React from 'react';
+
 import doggo from '../../../images/doggos.gif';
 import './styles.scss';
 
 
 const Main = () => {
+
   return (
       <div className='main'>
         <div className='main--text'>

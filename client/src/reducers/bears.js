@@ -1,11 +1,9 @@
-import * as actionsType from "../actionsType";
-
 const bears = (state = [], action) => {
     switch (action.type) {
-        case actionsType.FETCH_ALL:
+        case 'FETCH_ALL':
             return action.payload;
     
-        case actionsType.ADD_BEAR:
+        case 'ADD_BEAR':
             return [...state, action.payload];
     
         default:
