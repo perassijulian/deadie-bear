@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import './styles.scss';
 
 const BearItem = () => {
@@ -9,13 +10,14 @@ const BearItem = () => {
       eyes: 'normal'
   }  
 
+  let params = useParams();
 
   return (
     <div className='bearItem'>
         <div className='bearItem--wrap'>
             <div className='bearItem--wrap--header'>
                 <img className='bearItem--wrap--header--arrow' src='' alt='arrow left'></img>
-                <h1 className='bearItem--wrap--header--title'>Bear #1</h1>
+                <h1 className='bearItem--wrap--header--title'>Bear {params.deadieId}</h1>
                 <img className='bearItem--wrap--header--arrow' src='' alt='arrow right'></img>
             </div>
             <div className='bearItem--wrap--body'>

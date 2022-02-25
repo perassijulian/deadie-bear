@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
 import { getBears } from '../../../actions/bearShowcase';
 
 import BearItem from '../../common/bearItem/BearItem'
@@ -16,13 +17,21 @@ const Showcase = () => {
 
   console.log(bears);
   
+  let params = useParams();
 
   return (
     <div className='showcase'>
-      <div className='showcase--wrap'>
-        {bears.map((item) => <img src='bear' alt='nft example' key={item._id} />)}
-      </div>
-      <BearItem />
+      {!params.deadieId && <div className='showcase--wrap'>
+        {bears.map((item) => (
+          <Link 
+            to={`/showcase/${item._id}`}
+            key={item._id}
+          >
+            <img src='bear' alt='nft example' key={item._id} />
+          </Link>
+        ))}
+      </div>}
+      {params.deadieId && <BearItem />}
     </div>
   )
 }

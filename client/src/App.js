@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import './styles.scss';
 import Showcase from './components/pages/showcase/Showcase';
 import About from './components/pages/about/About';
+import BearItem from './components/common/bearItem/BearItem';
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
     <Navbar />
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/showcase' element={<Showcase />} />
         <Route path='/about' element={<About />} />
+        <Route path='/showcase' element={<Showcase />}>
+          <Route path=':deadieId' element={<BearItem />} />
+        </Route>
       </Routes>
     </div>
   );
