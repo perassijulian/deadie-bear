@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import './styles.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -25,7 +26,7 @@ const Showcase = () => {
             to={`/showcase/${item._id}`}
             key={item._id}
           >
-            <img src='bear' alt='nft example' key={item._id} />
+            <img className='showcase--wrap--image' src={item.image} alt='nft example' key={item._id} />
           </Link>
         ))}
       </div>}

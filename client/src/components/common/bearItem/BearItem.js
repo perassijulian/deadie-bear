@@ -10,7 +10,6 @@ const BearItem = (props) => {
 
     //SHOULD BE ON API
     useEffect(() => {
-        console.log("first")
         axios.get(window.location.href)
         .then((bear) => {
             const { _id, __v, image, ...attributes } = bear.data;
@@ -24,12 +23,12 @@ const BearItem = (props) => {
     <div className='bearItem'>
         <div className='bearItem--wrap'>
             <div className='bearItem--wrap--header'>
-                <img className='bearItem--wrap--header--arrow' src='' alt='arrow left'></img>
-                <h1 className='bearItem--wrap--header--title'>Bear {idToDisplay}</h1>
-                <img className='bearItem--wrap--header--arrow' src='' alt='arrow right'></img>
+                <a className='bearItem--wrap--header--arrow' href={idToDisplay>1 ? `/showcase/${idToDisplay-1}` : "/showcase/1"}>⬅️</a>
+                <h1 className='bearItem--wrap--header--title'>Bear # {idToDisplay}</h1>
+                <a className='bearItem--wrap--header--arrow' href={`/showcase/${idToDisplay+1}`}>➡️</a>
             </div>
             <div className='bearItem--wrap--body'>
-                <img src={imageToDisplay} alt='Nft selected'></img>
+                <img className='bearItem--wrap--body--image' src={imageToDisplay} alt='Nft selected'></img>
                 <div className='bearItem--wrap--body--description'>
                     <h2>Attributes</h2>
                     {Object.keys(bearToDisplay).map((keyName, i) => (

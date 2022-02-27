@@ -13,13 +13,24 @@
             justify-content: space-between;
             align-items: center;
 
+            &--arrow{
+                font-size: 1.8rem;
+                text-decoration: none;
+            }
+
         }
 
         &--body{
+            margin-top: 10px;
             display: flex;
+
+            &--image{
+                width: 300px;
+            }
 
             &--description{
                 width: 400px;
+                margin-left: 10px;
 
                 &--item{
                     display: flex;

@@ -1,0 +1,14 @@
+.showcase{
+    display: flex;
+    justify-content: center;
+
+    &--wrap{
+
+        &--image{
+            width: 150px;
+            margin: 10px;
+            border-radius: 10px;
+
+        }
+    }
+}
