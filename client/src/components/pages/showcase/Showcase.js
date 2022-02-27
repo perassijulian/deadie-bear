@@ -9,6 +9,8 @@ import BearItem from '../../common/bearItem/BearItem'
 
 const Showcase = () => {
   const bears = useSelector(state => state.bears);
+
+  const lastBear = bears.length;
   
   const dispatch = useDispatch();
 
@@ -30,7 +32,7 @@ const Showcase = () => {
           </Link>
         ))}
       </div>}
-      {params.deadieId && <BearItem />}
+      {params.deadieId && <BearItem lastBear={lastBear}/>}
     </div>
   )
 }

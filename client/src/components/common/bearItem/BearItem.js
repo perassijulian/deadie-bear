@@ -23,9 +23,15 @@ const BearItem = (props) => {
     <div className='bearItem'>
         <div className='bearItem--wrap'>
             <div className='bearItem--wrap--header'>
-                <a className='bearItem--wrap--header--arrow' href={idToDisplay>1 ? `/showcase/${idToDisplay-1}` : "/showcase/1"}>⬅️</a>
+                <a 
+                    className='bearItem--wrap--header--arrow' 
+                    href={idToDisplay>1 ? `/showcase/${idToDisplay-1}` : "/showcase/1"}
+                >⬅️</a>
                 <h1 className='bearItem--wrap--header--title'>Bear # {idToDisplay}</h1>
-                <a className='bearItem--wrap--header--arrow' href={`/showcase/${idToDisplay+1}`}>➡️</a>
+                <a 
+                    className='bearItem--wrap--header--arrow' 
+                    href={!(idToDisplay===props.lastBear) ? `/showcase/${idToDisplay+1}` : `/showcase/${idToDisplay}`}
+                >➡️</a>
             </div>
             <div className='bearItem--wrap--body'>
                 <img className='bearItem--wrap--body--image' src={imageToDisplay} alt='Nft selected'></img>

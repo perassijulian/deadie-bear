@@ -6,8 +6,14 @@ import { addBear } from '../../../actions/bearShowcase';
 
 const AddBear = () => {
     const [formData, setFormData] = useState({
+        accesories:"",
+        background:"",
+        costume:"",
+        ears:"",
         eyes:"",
+        head:"",
         mouth:"",
+        face:"",
         image: ""
     });
 
@@ -27,8 +33,14 @@ const AddBear = () => {
         console.log(formData);
         dispatch(addBear(formData));
         setFormData({
+            accesories:"",
+            background:"",
+            costume:"",
+            ears:"",
             eyes:"",
+            head:"",
             mouth:"",
+            face:"",
             image: ""
         });
     }
@@ -36,8 +48,14 @@ const AddBear = () => {
   return (
     <div className='addBear'>
         <form className='addBear--form' onSubmit={handleSubmit}>
+            <input type='text' name='accesories' value={formData.accesories} placeholder='accesories' onChange={handleChange}/>
+            <input type='text' name='background' value={formData.background} placeholder='background' onChange={handleChange}/>
+            <input type='text' name='costume' value={formData.costume} placeholder='costume' onChange={handleChange}/>
+            <input type='text' name='ears' value={formData.ears} placeholder='ears' onChange={handleChange}/>
             <input type='text' name='eyes' value={formData.eyes} placeholder='eyes' onChange={handleChange}/>
+            <input type='text' name='head' value={formData.head} placeholder='head' onChange={handleChange}/>
             <input type='text' name='mouth' value={formData.mouth} placeholder='mouth' onChange={handleChange}/>
+            <input type='text' name='face' value={formData.face} placeholder='face' onChange={handleChange}/>
             <div>
                 <FileBase 
                     type="file"
