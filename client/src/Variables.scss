@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+//NAVBAR
+$navbarHeigth: 60px;
+
 //FONTS
 $Inter: 'Inter', sans-serif;
 
@@ -9,6 +12,7 @@ $mdText: 25px;
 //COLORS
 $mainColor: #ff8867a8; 
 $secColor: #ff52ffb2;
+$thirColor: #ff9fffb2;
 
 //BUTTON
 @mixin button-behaviour{

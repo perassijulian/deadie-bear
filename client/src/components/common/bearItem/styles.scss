@@ -1,10 +1,22 @@
 @import '../../../Variables.scss';
 
-//*{border: 1px solid red}
 
 .bearItem{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: $thirColor;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+    hr{
+        margin-top: 7px;
+        height: 3px;
+        background-color: $secColor;
+        border: none;
+        border-radius: 3px;
+    }
 
     &--wrap{
 
@@ -26,6 +38,7 @@
 
             &--image{
                 width: 300px;
+                border-radius: 7px;
             }
 
             &--description{
@@ -36,7 +49,7 @@
                     display: flex;
                     justify-content: space-between;
                     background-color: $secColor;
-                    margin: 3px;
+                    margin: 5px;
                     padding: 3px;
                     border-radius: 15px;
 

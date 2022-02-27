@@ -33,6 +33,7 @@ const BearItem = (props) => {
                     href={!(idToDisplay===props.lastBear) ? `/showcase/${idToDisplay+1}` : `/showcase/${idToDisplay}`}
                 >➡️</a>
             </div>
+            <hr />
             <div className='bearItem--wrap--body'>
                 <img className='bearItem--wrap--body--image' src={imageToDisplay} alt='Nft selected'></img>
                 <div className='bearItem--wrap--body--description'>
