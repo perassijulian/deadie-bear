@@ -9,9 +9,13 @@ export const getBears = async (req,res) => {
     }  
 };
 
-export const addBear = (req,res) => {
-    const newBear = new Bear(req.body)
+export const addBear = async (req,res) => {
+    const newBear = new Bear(req.body);
+    const bearsAtDb = await Bear.find({});
+    const _id = bearsAtDb.length + 1;
+    console.log(_id);
     try {
+        newBear._id = _id;
         newBear.save()
         res.status(200).json(newBear);
     } catch (error) {
