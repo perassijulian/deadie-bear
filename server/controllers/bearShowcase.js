@@ -43,4 +43,3 @@ export const getSpecificBear = async (req,res) => {
         console.log(error);
     }  
 };
-

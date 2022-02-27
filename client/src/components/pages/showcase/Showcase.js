@@ -29,7 +29,7 @@ const Showcase = () => {
           </Link>
         ))}
       </div>}
-      {params.deadieId && <BearItem />}
+      {params.deadieId && <BearItem id={params.deadieId} />}
     </div>
   )
 }
