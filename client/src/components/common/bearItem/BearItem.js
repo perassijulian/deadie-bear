@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getSpecificBear } from '../../../actions/bearShowcase';
 import './styles.scss';
 
 const BearItem = () => {
+    const [bearToShow, setBearToShow] = useState({});
 
   const data = {
       background: 'blue',
@@ -12,10 +13,24 @@ const BearItem = () => {
       eyes: 'normal'
   }  
 
-   const bear = useSelector(state => state);
+   const bear = useSelector(state => state.bears);
+
+   const data2 = Object.assign({}, bear)
   
+   console.log(data2);
    console.log('bearItem: ', bear)
   
+   useEffect(() => {
+    if (params.deadieId) {
+        for (let i=0; i<bear.length; i++) {
+            if (bear[i]._id === params.deadieId) {
+               setBearToShow(bear(i));
+            }
+        }
+
+    }
+   }, [])
+   
 //   const dispatch = useDispatch();
 
 //   useEffect(() => {
@@ -36,10 +51,10 @@ const BearItem = () => {
                 <img src='' alt='Nft selected'></img>
                 <div className='bearItem--wrap--body--description'>
                     <h2>Attributes</h2>
-                    {Object.keys(data).map((keyName, i) => (
+                    {Object.keys(bearToShow).map((keyName, i) => (
                         <div className='bearItem--wrap--body--description--item' key={i}>
                             <h3>{keyName}</h3>
-                            <h4>{data[keyName]}</h4>
+                            <h4>{bearToShow[keyName]}</h4>
                         </div>
                     ))}
                 </div>
