@@ -6,7 +6,7 @@ import './styles.scss';
 import Showcase from './components/pages/showcase/Showcase';
 import About from './components/pages/about/About';
 import BearItem from './components/common/bearItem/BearItem';
-import AddBear from './components/pages/showcase/addBear/AddBear';
+import AddBear from './components/pages/addBear/AddBear';
 
 function App() {
   return (

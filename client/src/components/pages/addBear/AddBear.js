@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import FileBase from 'react-file-base64';
 import { useDispatch } from 'react-redux';
-import { addBear } from '../../../../actions/bearShowcase';
+import { addBear } from '../../../actions/bearShowcase';
 
 const AddBear = () => {
     const [formData, setFormData] = useState({
@@ -24,8 +24,13 @@ const AddBear = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(addBear(formData))
-        console.log(formData)
+        console.log(formData);
+        dispatch(addBear(formData));
+        setFormData({
+            eyes:"",
+            mouth:"",
+            image: ""
+        });
     }
 
   return (
