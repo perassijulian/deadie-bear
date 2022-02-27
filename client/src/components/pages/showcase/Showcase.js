@@ -14,8 +14,6 @@ const Showcase = () => {
   useEffect(() => {
       dispatch(getBears());
   }, [dispatch])
-
-  console.log(bears);
   
   let params = useParams();
 

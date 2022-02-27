@@ -34,3 +34,13 @@ export const deleteBear = async (req,res) => {
         console.log(error);
     }
 }
+
+export const getSpecificBear = async (req,res) => {
+    try {
+        const bear = await Bear.findById(req.params.deadieId);
+        res.status(200).json(bear);
+    } catch (error) {
+        console.log(error);
+    }  
+};
+

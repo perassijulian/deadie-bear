@@ -6,6 +6,7 @@ import './styles.scss';
 import Showcase from './components/pages/showcase/Showcase';
 import About from './components/pages/about/About';
 import BearItem from './components/common/bearItem/BearItem';
+import AddBear from './components/pages/showcase/addBear/AddBear';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/about' element={<About />} />
+        <Route path='/add' element={<AddBear />} />
         <Route path='/showcase' element={<Showcase />}>
           <Route path=':deadieId' element={<BearItem />} />
         </Route>

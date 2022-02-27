@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { getSpecificBear } from '../../../actions/bearShowcase';
 import './styles.scss';
 
 const BearItem = () => {
@@ -9,6 +11,16 @@ const BearItem = () => {
       mouth: 'closed',
       eyes: 'normal'
   }  
+
+   const bear = useSelector(state => state);
+  
+   console.log('bearItem: ', bear)
+  
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//       dispatch(getSpecificBear());
+//   }, [dispatch])
 
   let params = useParams();
 

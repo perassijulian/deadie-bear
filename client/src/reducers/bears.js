@@ -3,6 +3,9 @@ const bears = (state = [], action) => {
         case 'FETCH_ALL':
             return action.payload;
     
+        case 'FETCH_SPECIFIC':
+            return action.payload;
+    
         case 'ADD_BEAR':
             return [...state, action.payload];
     
