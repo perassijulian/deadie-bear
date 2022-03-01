@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="App" data-theme={theme} >
+    <div data-theme={theme} className="App" >
     <Navbar changeTheme={changeTheme} currentTheme={theme} />
       <Routes>
         <Route path='/' element={<Main />} />
