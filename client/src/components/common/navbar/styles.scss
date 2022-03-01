@@ -8,14 +8,21 @@
     height: $navbarHeigth;
     width: 100vw;
 
-    &--logo{
-        margin-left: 30px;
-        font-size: $mdText;
-        @include button-behaviour;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
+    &--brand{
+        display:flex;
 
+        &--toggle{
+            display: none;
+        }
+
+        &--logo{
+            margin-left: 30px;
+            font-size: $mdText;
+            @include button-behaviour;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+        }
     }
 
     &--list{

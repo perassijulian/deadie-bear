@@ -9,10 +9,24 @@ $Inter: 'Inter', sans-serif;
 $smText: 20px;
 $mdText: 25px;
 
-//COLORS
-$mainColor: #ff8867a8; 
-$secColor: #ff52ffb2;
-$thirColor: #ff9fffb2;
+//THEMES
+
+$mainColor: #572f24a8; 
+$secColor: #581e58b2;
+$thirColor: #794c79b2;
+
+[data-theme='light'] {
+    --background-color: #fff;
+    --text-color: #121416d8;
+    --link-color: #543fd7;
+}
+
+[data-theme='dark'] {
+    --background-color: #212a2e;
+    --text-color: #F7F8F8;
+    --link-color: #828fff;
+}
+
 
 //BUTTON
 @mixin button-behaviour{

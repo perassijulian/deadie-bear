@@ -7,11 +7,18 @@ import Showcase from './components/pages/showcase/Showcase';
 import About from './components/pages/about/About';
 import BearItem from './components/common/bearItem/BearItem';
 import AddBear from './components/pages/addBear/AddBear';
+import { useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+  
+  const changeTheme = () => {
+    theme === "dark" ? setTheme("light") : setTheme('dark');
+  };
+
   return (
-    <div className="App">
-    <Navbar />
+    <div className="App" data-theme={theme} >
+    <Navbar changeTheme={changeTheme} currentTheme={theme} />
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/about' element={<About />} />
